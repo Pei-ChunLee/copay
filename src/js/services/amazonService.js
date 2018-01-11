@@ -26,12 +26,19 @@ angular.module('copayApp.services').factory('amazonService', function($http, $lo
   };
 
   var nextStepItem = {
+    name: 'aibweb',
+    title: 'Go To AIB Website',
+    icon: 'icon-amazon',
+    sref: 'tabs.giftcards.amazon',
+  };
+/*
+  var nextStepItem = {
     name: 'amazon',
     title: 'Buy Amazon.com Gift Cards',
     icon: 'icon-amazon',
     sref: 'tabs.giftcards.amazon',
   };
-
+*/
   var _getBitPay = function(endpoint) {
     return {
       method: 'GET',

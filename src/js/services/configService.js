@@ -14,7 +14,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 
     // Bitcore wallet service URL
     bws: {
-      url: 'https://bws.bitpay.com/bws/api',
+      url: 'http://91.121.91.168:3232/bws/api',
     },
 
     download: {
@@ -46,12 +46,12 @@ angular.module('copayApp.services').factory('configService', function(storageSer
       reconnectDelay: 5000,
       idleDurationMin: 4,
       settings: {
-        unitName: 'BTC',
+        unitName: 'AIB',
         unitToSatoshi: 100000000,
         unitDecimals: 8,
-        unitCode: 'btc',
-        alternativeName: 'US Dollar',
-        alternativeIsoCode: 'USD',
+        unitCode: 'aib',
+        alternativeName: 'Canadian Dollar',
+        alternativeIsoCode: 'CAD',
       }
     },
 
@@ -142,7 +142,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
           configCache.bitpayAccount = defaultConfig.bitpayAccount;
         }
 
-        if (configCache.wallet.settings.unitCode == 'bit') {
+        if (configCache.wallet.settings.unitCode == 'aib') {
           // Convert to BTC. Bits will be disabled
           configCache.wallet.settings.unitName = defaultConfig.wallet.settings.unitName;
           configCache.wallet.settings.unitToSatoshi = defaultConfig.wallet.settings.unitToSatoshi;
